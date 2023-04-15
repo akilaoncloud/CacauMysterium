@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
+    <style>
+        body{
+            text-align: center;
+            background-image: url(https://i.postimg.cc/T1xn9qG8/3.jpg);
+            background-size: cover;
+            /*font-family:  a definir*/
+        }
+        form{
+            color: rgb(0, 0, 0);
+            padding: 0, 25%;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 25%;
+            right: 25%;
+            transform: (-50%, -50%);
+            text-align: center;
+        }
+        input{
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(102, 56, 56);
+            border-style: dashed;
+            outline: 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Cadastro de Usuário</h1>
     <form action="cadastro.php" method="post" id="formulario">
+      <h1>Cadastro de Usuário</h1>
       <label for="nome_completo">Nome completo:</label><br>
       <input type="text" id="nome_completo" name="nome_completo" required/><br><br>
 
