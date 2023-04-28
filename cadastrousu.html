@@ -8,48 +8,50 @@
     <style>
         body{
             text-align: center;
-            background-image: url(https://i.postimg.cc/T1xn9qG8/3.jpg);
+            background-image: url(https://i.postimg.cc/bY562MB8/image.png);
             background-size: cover;
-            /*font-family:  a definir*/
+            font-family: cursive;
         }
         form{
-            color: rgb(0, 0, 0);
+            color:  rgb(99, 43, 43);
             padding: 0, 25%;
-            text-align: center;
+            text-align: left;
             position: absolute;
-            top: 20%;
-            left: 25%;
-            right: 25%;
-            transform: (-50%, -50%);
-            text-align: center;
+            top: 30%;
+            left: 10%;
+
         }
         input{
             background-color: rgb(255, 255, 255);
             border-color: rgb(102, 56, 56);
-            border-style: dashed;
+            width: 80%;
             outline: 0;
             border-radius: 10px;
             text-align: center;
+        }
+        #button{
+            width: 40%;
         }
 
     </style>
 </head>
 <body>
     <form action="cadastro.php" method="post" id="formulario">
-      <h1>Cadastro de Usuário</h1>
-      <label for="nome_completo">Nome completo:</label><br>
-      <input type="text" id="nome_completo" name="nome_completo" required/><br><br>
+        <h1>Cadastro de Usuário</h1>
+        <label for="nome_completo">Nome completo:</label><br>
+        <input type="text" id="nome_completo" name="nome_completo" required/><br><br>
 
-      <label for="nome_usuario">Nome de usuário:</label><br>
-      <input type="text" id="nome_usuario" name="nome_usuario"required/><br><br>
+        <label for="nome_usuario">Nome de usuário:</label><br>
+        <input type="text" id="nome_usuario" name="nome_usuario"required/><br><br>
 
-      <label for="senha">Senha:</label><br>
-      <input type="password" id="senha" name="senha"required/><br><br> 
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"required/><br><br> 
 
-      <label for="cpf">CPF:</label><br>
-      <input type="text" id="cpf" name="cpf"required><br><br>
+        <label for="cpf">CPF:</label><br>
+        <input type="text" id="cpf" name="cpf"required><br><br>
 
-      <input type="submit" value="Cadastrar" id="button" >
+        <input type="submit" value="Cadastrar" id="button" >
+    </form>
       
 </body>
 </html>
