@@ -35,9 +35,9 @@
     </style>
 </head>
 <body>
-<div id="divBusca">
-  <input type="text" id="txtBusca" placeholder=" Buscar..."/>
-  <img src="https://i.postimg.cc/Wzz4ZttN/image.png" height="25" width="23" id="lupa"/>
+<div id="divBusca" name="divBusca" >
+  <input type="text" id="txtBusca" name="txtBusca" placeholder=" Buscar..." />
+  <img src="https://i.postimg.cc/Wzz4ZttN/image.png" height="25" width="23" name="lupa" id="lupa"/>
   
 </div>
 </body>
