@@ -1,20 +1,14 @@
 <?php
 
-class ProdutoDAO {
+$host="127.0.0.1";
+$port=3306;
+$socket="";
+$user="root";
+$password="";
+$dbname="produtos";
 
-  public function cadastrar($produto) {
-    $conn = new PDO('mysql:host=localhost;dbname=meu_banco', 'usuario', 'senha');
+$conexao = new mysqli($host, $user, $password, $dbname, $port, $socket)
+	or die ('Could not connect to the database server' . mysqli_connect_error());
 
-    $stmt = $conn->prepare('INSERT INTO produtos (nomeProd, descricao, codigo, precoUni) VALUES (:nomeProd, :descricao, :codigo, :precoUni)');
-    $stmt->bindValue(':nomeProd', $produto->getomeProd());
-    $stmt->bindValue(':descricao', $produto->getdescricao());
-    $stmt->bindValue(':codigo', $produto->getcodigo());
-    $stmt->bindValue(':precoUni', $produto->getprecoUni());
-    $stmt->execute();
-
-    $produto->setId($conn->lastInsertId());
-  }
-  
-}
-
+//$con->close();
 ?>
