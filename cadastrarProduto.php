@@ -1,3 +1,21 @@
+<?php
+include('conexao.php'){
+
+    if(isset($_POST['submit'])){
+
+        $nomeProd = $_POST['nomeProd'];
+        $descricao = $_POST['descricao'];
+        $codigo = $_POST['codigo'];
+        $precoUn = $_POST['precoUn'];
+
+        $sql = mysqli_query($conexao, "INSERT INTO produtos(nomeProd, descricao, codigo, precoUn)
+        VALUES('$nomeProd', '$descricao', '$codigo', '$precoUn')");
+    }
+
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
