@@ -13,7 +13,7 @@
             font-style: normal;
         }
         body{
-            background-color: rgb(0, 0, 0);
+            background-image: url(https://i.postimg.cc/QMfDsN22/fundoform.png);
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -25,13 +25,14 @@
             padding: 0, 25%;
             text-align: left;
             position: absolute;
-            top: 17%;
+            top: 26%;
             left: 14%;
 
         }
         input{
+            color: rgb(109, 23, 23);
             background-color: rgb(255, 255, 255);
-            border-color: rgb(102, 56, 56);
+            border-color: rgb(90, 46, 46);
             font-family: 'Times New Roman', Times, serif;
             font-size: medium;
             height: 24px;
@@ -45,6 +46,7 @@
         margin: 0;
         }
         #cadastrar{
+            width: 40%;
             font-family: 'SaintCarell';
             font-size: medium;
         }
@@ -62,7 +64,7 @@
         Descrição: <br><input type="text" id="descricao" required /><br><br>
         Código: <br><input type="number" id="codigo" required /><br><br>
         Preço unitário: <br><input type="number" id="precoUn" required /><br><br>
-        <input type="submit" id="cadastrar" value="Cadastrar" required />
+        <input type="submit" id="cadastrar" name="cadastrar" value="Cadastrar" />
     </form>
     <div id="img">
     </div>
