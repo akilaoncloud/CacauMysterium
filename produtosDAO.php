@@ -5,13 +5,13 @@
     private $nomeProd;
     private $descricao;
     private $codigo;
-    private $precoUni;
+    private $precoUn;
 
-    public function __construct($nomeProd, $descricao, $codigo, $precoUni) {
+    public function __construct($nomeProd, $descricao, $codigo, $precoUn) {
         $this->nomeProd = $nomeProd;
         $this->descricao = $descricao;
         $this->codigo = $codigo;
-        $this->precoUni = $precoUni;
+        $this->precoUn = $precoUn;
     }
 
     public function getId() {
@@ -46,12 +46,12 @@
         $this->codigo = $codigo;
       }
       
-      public function getprecoUni() {
-        return $this->precoUni;
+      public function getprecoUn() {
+        return $this->precoUn;
       }
       
-      public function setprecoUni($precoUni) {
-        $this->precoUni = $precoUni;
+      public function setprecoUn($precoUn) {
+        $this->precoUn = $precoUn;
       }
       public function cadastrar() {
         $dao = new ProdutoDAO();
