@@ -47,8 +47,8 @@
   <img src="https://i.postimg.cc/Wzz4ZttN/image.png" height="25" width="23" name="lupa" id="lupa"/>  
 </div>
 <div name="button" id="button">
-<input value="Pesquisar" type="submit">
-    </div>
+    <input value="Pesquisar" type="submit">
+</div>
 </form>
 </body>
 </html>
