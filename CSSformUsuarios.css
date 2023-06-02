@@ -1,26 +1,35 @@
-/*css do form*/
-
 body{
     text-align: center;
-    color: white;
-    background-image: /* a definir */;
-    font-family: /* a definir*/;
+    background-image: url(https://i.postimg.cc/QMfDsN22/fundoform.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: cursive;
 }
 form{
     color: white;
     padding: 0, 25%;
-    text-align: center;
+    text-align: left;
     position: absolute;
-    top: 20%;
-    left: 25%;
-    right: 25%;
-    transform: (-50%, -50%);
-    text-align: center;
+    top: 27%;
+    left: 14%;
+
 }
 input{
-    border-radius: 10px;
-    border: 0px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(102, 56, 56);
+    font-family: cursive;
+    font-size: medium;
+    width: 90%;
+    outline: 0;
+    border-radius: 15px;
     text-align: center;
 }
-
-/*falta o css do botão*/
+#button{
+    width: 40%;
+    font-family: cursive;
+}
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
