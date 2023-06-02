@@ -3,6 +3,7 @@
 class CadastroUsuario {
     public $nomeCompleto;
     public $nomeUsuario;
+    public $email;
     public $senha;
     public $cpf;
 
