@@ -1,8 +1,8 @@
 <?php
 
 class CadastroUsuario {
-    public $nomeCompleto;
-    public $nomeUsuario;
+    public $nomeC;
+    public $nomeUser;
     public $email;
     public $senha;
     public $cpf;
