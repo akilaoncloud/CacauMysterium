@@ -26,7 +26,7 @@ CREATE TABLE endereco (
 
 CREATE TABLE cartao (
     idcartao int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    usuario varchar(50) not NULL,
+    usuario int not NULL,
     numCartao int NOT NULL,
     cvc int NOT NULL,
     dtVal date NOT NULL,
