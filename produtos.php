@@ -6,11 +6,11 @@ class Produtos {
     private $codigo;
     private $precoUn;
 
-    public function cadastrar($nomeProd, $descricao, $codigo, $precoUni) {
+    public function cadastrar($nomeProd, $descricao, $codigo, $precoUn) {
         $this->nomeProd = $nomeProd;
         $this->descricao = $descricao;
         $this->codigo = $codigo;
-        $this->precoUni = $precoUni;
+        $this->precoUn = $precoUn;
     }
 
     public function getnome(){
@@ -35,12 +35,12 @@ class Produtos {
     public function setcodigo($codigo) {
         $this->codigo = $codigo;
     }
-    public function getprecoUni(){
-        return $this->$precoUni;
+    public function getprecoUn(){
+        return $this->$precoUn;
     }
 
-    public function setprecoUni($precoUni){
-        $this->precoUni = $precoUni;
+    public function setprecoUn($precoUn){
+        $this->precoUn = $precoUn;
     }
 }
 ?>
