@@ -1,3 +1,20 @@
+<?php
+include"cadastrousu.php";
+include"conexao.php";
+include"";
+
+  if(isset($_POST['submit'])){
+
+  $nomeC =  $_POST['nomeC'];
+  $nomeUser = $_POST['nomeUser'];
+  $email = $_POST['email'];
+  $senha = $_POST['senha']; 
+  $CPF = $_POST['CPF'];
+
+  $result = mysqli_query($con, "INSERT INTO usuarios(nomeC, nomeUser, email, senha, CPF)
+  VALUES('$nomeC', '$nomeUser', '$email', '$senha', '$CPF')");
+  }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -47,17 +64,20 @@
 <body>
     <form action="cadastro.php" method="post" id="formulario">
         <h1>Cadastro de Usuário</h1>
-        <label for="nome_completo">Nome completo:</label><br>
-        <input type="text" id="nome_completo" name="nome_completo" required/><br><br>
+        <label for="nomeC">Nome completo:</label><br>
+        <input type="text" id="nomeC" name="nomeC" required/><br><br>
 
-        <label for="nome_usuario">Nome de usuário:</label><br>
-        <input type="text" id="nome_usuario" name="nome_usuario"required/><br><br>
+        <label for="nomeUser">Nome de usuário:</label><br>
+        <input type="text" id="nomeUser" name="nomeUser"required/><br><br>
+        
+        <label for="email">Nome de usuário:</label><br>
+        <input type="text" id="email" name="email"required/><br><br>
 
         <label for="senha">Senha:</label><br>
         <input type="password" id="senha" name="senha"required/><br><br> 
 
-        <label for="cpf">CPF:</label><br>
-        <input type="text" id="cpf" name="cpf"required><br><br>
+        <label for="CPF">CPF:</label><br>
+        <input type="text" id="CPF" name="CPF"required><br><br>
 
         <input type="submit" value="Cadastrar" id="button" >
     </form>
