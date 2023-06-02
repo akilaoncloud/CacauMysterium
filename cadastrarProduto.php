@@ -1,7 +1,7 @@
 <?php
 include"produtos.php";
-include"produtosDAO.php"
-include('conexao.php'){
+include"produtosDAO.php";
+include"conexao.php";
 
     if(isset($_POST['submit'])){
 
