@@ -5,9 +5,9 @@ class CadastroUsuario {
     public $nomeUser;
     public $email;
     public $senha;
-    public $cpf;
+    public $CPF;
 
-    public function __construct($nomeC, $nomeUser, $email, $senha,$CPF) {
+    public function __construct($nomeC, $nomeUser, $email, $senha, $CPF) {
         $this->nomeC = $nomeC;
         $this->nomeUser = $nomeUser;
         $this->email = $email;
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomeUsuario = $_POST["nomeUser"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
-    $cpf = $_POST["cpf"];
+    $CPF = $_POST["CPF"];
 
     $cadastroUsuario = new CadastroUsuario($nomeC, $nomeUser, $email, $senha, $CPF);
 
