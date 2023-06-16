@@ -6,41 +6,19 @@ class Produtos {
     private $codigo;
     private $precoUn;
 
-    public function cadastrar($nomeProd, $descricao, $codigo, $precoUn) {
-        $this->nomeProd = $nomeProd;
-        $this->descricao = $descricao;
-        $this->codigo = $codigo;
-        $this->precoUn = $precoUn;
+    public function cadastrar() {
+        $objeto = new ProdutosDAO();
+        $objeto->set("nomeProd", $this->nomeProd);
+        $objeto->set("descricao", $this->descricao);
+        $objeto->set("codigo", $this->codigo);
+        $objeto->set("precoUn", $this->precoUn);
+
+        return $objeto->cadastrar();
     }
 
-    public function getnome(){
-        return $this->$nomeProd;
-    }
-
-    public function setnome($nomeProd){
-        $this->nomeProd = $nomeProd;
-    }
-
-    public function getdescricao(){
-        return $this->$descricao;
-    }
-
-    public function setdescricao($descricao){
-        $this->descricao = $descricao;
-    }
-    public function getcodigo(){
-        return $this->$codigo;
-    }
-
-    public function setcodigo($codigo) {
-        $this->codigo = $codigo;
-    }
-    public function getprecoUn(){
-        return $this->$precoUn;
-    }
-
-    public function setprecoUn($precoUn){
-        $this->precoUn = $precoUn;
+    public function set($prop, $value) {
+        $this->$prop = $value;
     }
 }
+
 ?>
