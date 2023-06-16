@@ -1,17 +1,16 @@
 <?php
-include"produtos.php";
-include"produtosDAO.php";
-include"conexao.php";
+include "Produtos.php";
+include "ProdutosDAO.php";
+include "conexao.php";
 
-if(isset($_POST['submit'])){
-
-    $nomeProd = $_POST['nomeProd'];
-    $descricao = $_POST['descricao'];
-    $codigo = $_POST['codigo'];
-    $precoUn = $_POST['precoUn'];
-
-    $sql = mysqli_query($conexao, "INSERT INTO produtos(nomeProd, descricao, codigo, precoUn)
-    VALUES('$nomeProd', '$descricao', '$codigo', '$precoUn')");
+$msg = "";
+if (!empty($_POST)){
+    $objeto = new Produtos;
+    $objeto->set("nomeProd", $_POST["nomeProd"]);
+    $objeto->set("descricao", $_POST["descricao"]);
+    $objeto->set("codigo", $_POST["codigo"]);
+    $objeto->set("precoUn", $_POST["precoUn"]);
+    $msg = $objeto->Cadastrar();
 }
 ?>
 
