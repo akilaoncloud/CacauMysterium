@@ -1,19 +1,18 @@
 <?php
-include"cadastrousu.php";
-include"conexao.php";
-include"cadastrousuDAO.php";
+include "Usuario.php";
+include "Conexao.php";
+include "UsuarioDAO.php";
 
-  if(isset($_POST['submit'])){
-
-  $nomeC =  $_POST['nomeC'];
-  $nomeUser = $_POST['nomeUser'];
-  $email = $_POST['email'];
-  $senha = $_POST['senha']; 
-  $CPF = $_POST['CPF'];
-
-  $result = mysqli_query($con, "INSERT INTO usuarios(nomeC, nomeUser, email, senha, CPF)
-  VALUES('$nomeC', '$nomeUser', '$email', '$senha', '$CPF')");
-  }
+$msg = "";
+if (!empty($_POST)){
+    $objeto = new Usuarios;
+    $objeto->set("nomeC", $_POST["nomeC"]);
+    $objeto->set("nomeUser", $_POST["nomeUser"]);
+    $objeto->set("email", $_POST["email"]);
+    $objeto->set("senha", $_POST["senha"]);
+    $objeto->set("CPF", $_POST["CPF"]);
+    $msg = $objeto->Cadastrar();
+}
 ?>
 
 <!DOCTYPE html>
