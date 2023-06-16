@@ -10,7 +10,7 @@
     <style>
         @font-face {
             font-family: 'SaintCarell';
-            src: url(SaintCarellClean_PERSONAL_USE_ONLY.otf) format('opentype');
+            src: url(fontes/SaintCarellClean_PERSONAL_USE_ONLY.otf) format('opentype');
             font-size: 40px;
             font-style: normal;
         }

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós</title>
     <style>
-         @font-face {
+        @font-face {
             font-family: 'SaintCarell';
-            src: url(SaintCarellClean_PERSONAL_USE_ONLY.otf) format('opentype');
+            src: url(fontes/SaintCarellClean_PERSONAL_USE_ONLY.otf) format('opentype');
             font-size: 40px;
             font-style: normal;
         }
@@ -43,7 +43,7 @@
     </style>
 </head>
 <body>
-  <div class="background-animation"></div>
+    <div class="background-animation"></div>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

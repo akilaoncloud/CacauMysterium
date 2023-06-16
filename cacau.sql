@@ -1,3 +1,5 @@
+CREATE DATABASE cacau;
+
 CREATE TABLE produtos (
     idprodutos int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nomeProd varchar(45) NOT NULL,

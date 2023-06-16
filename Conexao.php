@@ -9,7 +9,7 @@ class Conexao{
     
     function Conexao(){
     }
- 
+    
     function set($prop, $value) {
         $this->$prop = $value;
     }
@@ -19,10 +19,10 @@ class Conexao{
         if ($con->connect_errno) {
             echo "Falha ao conectar: (" . $con->connect_errno . ") " . $con->connect_error;
         }
-       
+        
         $qry = mysqli_query($con, $this->sql) or 
                 die($this->erro(mysqli_error($con)));
-               
+        
         mysqli_close($con);
         return $qry;
         
