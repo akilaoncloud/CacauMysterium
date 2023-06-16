@@ -3,18 +3,15 @@ include"produtos.php";
 include"produtosDAO.php";
 include"conexao.php";
 
-    if(isset($_POST['submit'])){
+if(isset($_POST['submit'])){
 
-        $nomeProd = $_POST['nomeProd'];
-        $descricao = $_POST['descricao'];
-        $codigo = $_POST['codigo'];
-        $precoUn = $_POST['precoUn'];
+    $nomeProd = $_POST['nomeProd'];
+    $descricao = $_POST['descricao'];
+    $codigo = $_POST['codigo'];
+    $precoUn = $_POST['precoUn'];
 
-        $sql = mysqli_query($conexao, "INSERT INTO produtos(nomeProd, descricao, codigo, precoUn)
-        VALUES('$nomeProd', '$descricao', '$codigo', '$precoUn')");
-    }
-
-
+    $sql = mysqli_query($conexao, "INSERT INTO produtos(nomeProd, descricao, codigo, precoUn)
+    VALUES('$nomeProd', '$descricao', '$codigo', '$precoUn')");
 }
 ?>
 
@@ -72,9 +69,7 @@ include"conexao.php";
         }
         #img{
             background-image: none;
-        }
-        
-
+        } 
     </style>
 </head>
 <body>
