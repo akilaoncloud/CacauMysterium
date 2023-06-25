@@ -1,6 +1,6 @@
 <?php
- 
- class ProdutosDAO {
+
+class ProdutosDAO {
 
     private $nomeProd;
     private $descricao;
