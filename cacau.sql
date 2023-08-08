@@ -28,20 +28,19 @@ CREATE TABLE endereco (
 
 CREATE TABLE cliente (
     idcliente int NOT NULL auto_increment primary key,
-    fk_cliente_idusuario int NOT NULL,
-    fk_cliente_idvenda int,
-    fk_cliente_idendereco int NOT NULL,
-    FOREIGN KEY (fk_cliente_idusuario) REFERENCES usuario(idusuario),
-    FOREIGN KEY (fk_cliente_idvenda) REFERENCES venda(idvenda),
-    FOREIGN KEY (fk_cliente_idendereco) REFERENCES endereco(idendereco)
+    idusuario int NOT NULL,
+    idendereco int NOT NULL,
+    coin int NOT NULL,
+    FOREIGN KEY (idusuario) REFERENCES usuario(idusuario),
+    FOREIGN KEY (idendereco) REFERENCES endereco(idendereco)
 );
 
 CREATE TABLE venda (
     idvenda int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    fk_venda_idcliente int NOT NULL,
-    fk_venda_idproduto int NOT NULL,
-    statusProduto varchar(15) NOT NULL,
+    idcliente int NOT NULL,
+    idproduto int NOT NULL,
+    statusVenda varchar(15) NOT NULL,
     dataVenda date NOT NULL,
-    FOREIGN KEY (fk_venda_idcliente) REFERENCES cliente(idcliente),
-    FOREIGN KEY (fk_venda_idproduto) REFERENCES produto(idproduto)
+    FOREIGN KEY (idcliente) REFERENCES cliente(idcliente),
+    FOREIGN KEY (idproduto) REFERENCES produto(idproduto)
 );
