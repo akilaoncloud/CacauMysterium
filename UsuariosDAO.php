@@ -15,6 +15,13 @@ class UsuariosDAO {
         $objeto->query();
         return "Cadastrado com Sucesso";
     }
+
+    public function consultarTodos() {
+        $objeto = new Conexao();
+        $sql = "SELECT nomeC, nomeUser, email, senha, CPF FROM usuarios";
+        $objeto->set("sql", $sql);
+        return $objeto->query();
+    }
     
     public function set($prop, $value) {
         $this->$prop = $value;

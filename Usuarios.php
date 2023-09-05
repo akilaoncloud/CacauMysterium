@@ -18,6 +18,11 @@ class Usuarios {
         return $objeto->cadastrar();
     }
 
+    public function consultarTodos() {
+        $objeto = new UsuariosDAO();
+        return $objeto->consultarTodos();
+    }
+
     public function set($prop, $value) {
         $this->$prop = $value;
     }

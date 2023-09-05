@@ -1,13 +1,13 @@
 CREATE DATABASE cacau;
 
-CREATE TABLE produto (
+CREATE TABLE produtos (
     idproduto int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nomeProd varchar(45) NOT NULL,
     descricao varchar(200) NOT NULL,
     codigo int NOT NULL
 );
 
-CREATE TABLE usuario (
+CREATE TABLE usuarios (
     idusuario int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nomeC varchar(45) NOT NULL,
     nomeUser varchar(45) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE cliente (
     idusuario int NOT NULL,
     idendereco int NOT NULL,
     coin int NOT NULL,
-    FOREIGN KEY (idusuario) REFERENCES usuario(idusuario),
+    FOREIGN KEY (idusuario) REFERENCES usuarios(idusuario),
     FOREIGN KEY (idendereco) REFERENCES endereco(idendereco)
 );
 
@@ -42,5 +42,5 @@ CREATE TABLE venda (
     statusVenda varchar(15) NOT NULL,
     dataVenda date NOT NULL,
     FOREIGN KEY (idcliente) REFERENCES cliente(idcliente),
-    FOREIGN KEY (idproduto) REFERENCES produto(idproduto)
+    FOREIGN KEY (idproduto) REFERENCES produtos(idproduto)
 );
