@@ -4,11 +4,11 @@ class Login {
     public $nomeUser;
     public $senha;
 
-    public function login() {
+    public function validarLogin() {
         $objeto = new LoginDAO();
         $objeto->set("nomeUser", $this->nomeUser);
         $objeto->set("senha", $this->senha);
-        return $objeto->ValidarLogin();
+        return $objeto->validarLogin();
     }
 
     public function set($prop, $value) {

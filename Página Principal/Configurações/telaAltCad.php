@@ -1,17 +1,15 @@
 <?php
-include "Usuarios.php";
-include "../Conexao.php";
-include "UsuariosDAO.php";
+include "../../Conexao.php";
+include "../../Cadastro de Usuarios/Usuarios.php";
+include "../../Cadastro de Usuarios/UsuariosDAO.php";
 
 $msg = "";
 if (!empty($_POST)){
     $objeto = new Usuarios;
-    $objeto->set("nomeC", $_POST["nomeC"]);
-    $objeto->set("nomeUser", $_POST["nomeUser"]);
+    $objeto->set("nomeUser", $_SESSION["login"]);
     $objeto->set("email", $_POST["email"]);
     $objeto->set("senha", $_POST["senha"]);
-    $objeto->set("CPF", $_POST["CPF"]);
-    $msg = $objeto->Cadastrar();
+    $msg = $objeto->alterar();
 }
 ?>
 
@@ -70,24 +68,14 @@ if (!empty($_POST)){
 </head>
 <body>
     <form action="" method="post" id="formulario">
-        <h1>Cadastro de Usuário</h1>
-        <label for="nomeC">Nome completo:</label><br>
-        <input type="text" id="nomeC" name="nomeC" required/><br><br>
-
-        <label for="nomeUser">Nome de usuário:</label><br>
-        <input type="text" id="nomeUser" name="nomeUser"required/><br><br>
-        
-        <label for="email">Email:</label><br>
+        <h1>Alterar Cadastro</h1>        
+        <label for="email">Novo Email:</label><br>
         <input type="text" id="email" name="email"required/><br><br>
-
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha"required/><br><br> 
-
-        <label for="CPF">CPF:</label><br>
-        <input type="text" id="CPF" name="CPF"required><br><br>
-
-        <input type="submit" value="Cadastrar" id="button" >
+        
+        <label for="senha">Nova Senha:</label><br>
+        <input type="password" id="senha" name="senha"required/><br><br><br>
+        <input type="submit" value="Alterar" id="button"><br><br>
+        <?php echo $msg;?>
     </form>
-      
 </body>
 </html>

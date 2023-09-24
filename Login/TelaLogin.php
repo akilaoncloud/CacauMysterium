@@ -1,14 +1,13 @@
 <?php
 include "Login.php";
-include "Conexao.php";
+include "C:/xampp/htdocs/repositorios/ProjetoDPS/Conexao.php";
 include "LoginDAO.php";
 
-$msg = "";
 if (!empty($_POST)){
     $objeto = new Login;
     $objeto->set("nomeUser", $_POST["nomeUser"]);
     $objeto->set("senha", $_POST["senha"]);
-    $msg = $objeto->Login();
+    $objeto->validarLogin();
 }
 ?>
 

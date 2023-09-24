@@ -16,6 +16,17 @@ class UsuariosDAO {
         return "Cadastrado com Sucesso";
     }
 
+    public function alterar() {
+        $objeto = new Conexao();
+        $SQL = "UPDATE usuarios SET 
+                email='$this->email', 
+                senha='$this->senha'
+                WHERE nomeUser='$this->nomeUser'";
+        $objeto->set("sql", $SQL);
+        $objeto->query();
+        return "Alterado com Sucesso";
+    }
+
     public function consultarTodos() {
         $objeto = new Conexao();
         $sql = "SELECT nomeC, nomeUser, email, senha, CPF FROM usuarios";

@@ -18,6 +18,14 @@ class Usuarios {
         return $objeto->cadastrar();
     }
 
+    public function alterar() {
+        $objeto = new UsuariosDAO();
+        $objeto->set("nomeUser", $this->nomeUser);
+        $objeto->set("email", $this->email);
+        $objeto->set("senha", $this->senha);
+        return $objeto->alterar();
+    }
+
     public function consultarTodos() {
         $objeto = new UsuariosDAO();
         return $objeto->consultarTodos();
