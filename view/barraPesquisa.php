@@ -1,6 +1,5 @@
 <?php
-
-include "../conexao.php";
+include "conexao.php";
 include "../class/pesquisa.php";
 include "../dao/pesquisaDAO.php";
 

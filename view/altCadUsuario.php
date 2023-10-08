@@ -1,6 +1,6 @@
 <?php
 include "verificaLogon.php";
-include "../conexao.php";
+include "conexao.php";
 include "../class/Usuarios.php";
 include "../dao/UsuariosDAO.php";
 

@@ -1,7 +1,7 @@
 <?php
+include "conexao.php";
 include "../class/produtos.php";
 include "../dao/produtosDAO.php";
-include "../conexao.php";
 
 $msg = "";
 if (!empty($_POST)){
