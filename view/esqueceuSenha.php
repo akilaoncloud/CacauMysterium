@@ -1,15 +1,14 @@
 <?php
-include "../../Conexao.php";
-include "../../Cadastro de Usuarios/Usuarios.php";
-include "../../Cadastro de Usuarios/UsuariosDAO.php";
+include "../conexao.php";
+include "../class/usuarios.php";
+include "../dao/usuariosDAO.php";
 
 $msg = "";
 if (!empty($_POST)){
     $objeto = new Usuarios;
-    $objeto->set("nomeUser", $_SESSION["login"]);
     $objeto->set("email", $_POST["email"]);
-    $objeto->set("senha", $_POST["senha"]);
-    $msg = $objeto->alterar();
+    $objeto->set("senha", $_POST["novasenha"]);
+    $msg = $objeto->esqueceuSenha();
 }
 ?>
 
@@ -19,11 +18,11 @@ if (!empty($_POST)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Login</title>
     <style>
         @font-face {
             font-family: 'SaintCarell';
-            src: url(fontes/SaintCarellClean_PERSONAL_USE_ONLY.otf) format('opentype');
+            src: url(../font/SaintCarellClean.otf) format('opentype');
             font-size: 40px;
             font-style: normal;
         }
@@ -41,7 +40,7 @@ if (!empty($_POST)){
             padding: 0, 25%;
             text-align: left;
             position: absolute;
-            top: 27%;
+            top: 38%;
             left: 14%;
 
         }
@@ -50,32 +49,49 @@ if (!empty($_POST)){
             border-color: rgb(102, 56, 56);
             font-family: 'Times New Roman', Times, serif;
             font-size: medium;
-            width: 90%;
+            width: 290px;
             outline: 0;
             border-radius: 15px;
             text-align: center;
         }
-        #Cadastrar{
+        #button{
             width: 40%;
             font-family: 'SaintCarell';
-            color:rgb(102, 56, 56);
+            color:rgb(92, 36, 36);
         }
         input[type="number"]::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }        
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        a {
+            color: rgb(255, 230, 230);
+        }
+        a:hover{
+            color: rgb(255, 230, 230);
+            text-decoration: none;
+        }
+        a:link{
+            color: rgb(255, 230, 230);
+            text-decoration: none;
+        }
+        a:visited{
+            color: rgb(255, 230, 230);
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <form action="" method="post" id="formulario">
-        <h1>Alterar Cadastro</h1>        
-        <label for="email">Novo Email:</label><br>
-        <input type="text" id="email" name="email"required/><br><br>
+        <h1>Alterar Senha</h1>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" required/><br><br>
         
-        <label for="senha">Nova Senha:</label><br>
-        <input type="password" id="senha" name="senha"required/><br><br><br>
-        <input type="submit" value="Alterar" id="button"><br><br>
-        <?php echo $msg;?>
+        <label for="novasenha">Nova Senha:</label><br>
+        <input type="password" id="novasenha" name="novasenha" required/><br><br>
+
+        <input type="submit" value="Confirmar" id="button" ><br><br>
+
     </form>
+    
 </body>
 </html>

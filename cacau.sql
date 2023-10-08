@@ -3,6 +3,7 @@ CREATE DATABASE cacau;
 CREATE TABLE produtos (
     idproduto int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nomeProd varchar(45) NOT NULL,
+    precoUn int NOT NULL,
     descricao varchar(200) NOT NULL,
     codigo int NOT NULL
 );
@@ -27,7 +28,7 @@ CREATE TABLE endereco (
 );
 
 CREATE TABLE cliente (
-    idcliente int NOT NULL auto_increment primary key,
+    idcliente int NOT NULL AUTO_INCREMENT primary key,
     idusuario int NOT NULL,
     idendereco int NOT NULL,
     coin int NOT NULL,

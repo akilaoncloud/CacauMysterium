@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @font-face {
+            font-family: 'SaintCarell';
+            src: url(SaintCarellClean_PERSONAL_USE_ONLY.otf) format('opentype');
+            font-size: 80px;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: justify;
+            background-color: #474e5d;
+            color: white;
+            font-size: 15px;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-section">
+    <h1 style="font-family: 'SaintCarell';">Sobre Nós</h1>
+    <p>No CacauMysterium, acreditamos que a magia do chocolate reside em sua versatilidade e na surpresa que ele traz a cada mordida. 
+       Somos apaixonados por chocolates únicos, misteriosos e diferentes, e queremos compartilhar essa paixão com você.</p>
+    <p>        
+        Nossa missão é proporcionar uma experiência personalizada e emocionante para todos os amantes de chocolate. 
+        Aqui, você tem a oportunidade de criar sua própria caixa de chocolates, com uma seleção cuidadosamente escolhida de chocolates misteriosos.
+        Imagine abrir uma caixa repleta de chocolates desconhecidos, cada um com seu próprio segredo e sabor inigualável. 
+        No CacauMysterium, valorizamos a diversidade e a originalidade, por isso trabalhamos com os melhores chocolatiers do mundo 
+        para trazer a você uma variedade incrível de chocolates artesanais.
+        Nossa plataforma exclusiva permite que você monte sua própria caixa de chocolates personalizada. 
+        Basta selecionar o tamanho da caixa e a quantidade de chocolates que deseja incluir. 
+        Em seguida, você será surpreendido com uma variedade de opções misteriosas, 
+        cada uma com uma descrição enigmática para aguçar sua curiosidade.
+        Nós entendemos que cada cliente é único, e é por isso que oferecemos uma experiência personalizada. 
+        Você pode indicar suas preferências, restrições alimentares ou até mesmo desafiar sua aventura no mundo do chocolate, 
+        optando por chocolates que você nunca provou antes. Queremos que você descubra sabores incríveis e vivencie a emoção de desvendar a magia do chocolate.
+        No CacauMysterium, qualidade é nossa prioridade. Trabalhamos com ingredientes cuidadosamente selecionados, 
+        desde os melhores grãos de cacau até os recheios mais deliciosos. Nosso compromisso é oferecer chocolates de alta qualidade, 
+        produzidos de forma ética e sustentável.        
+        Além de criar sua própria caixa de chocolates, também oferecemos assinaturas mensais e opções de presentes personalizados. 
+        Quer surpreender alguém especial? Envie uma caixa misteriosa de chocolates que certamente fará o coração da pessoa bater mais rápido.        
+        Estamos animados para embarcar nesta jornada de descoberta de chocolates com você. 
+        Explore o mundo do CacauMysterium e permita-se ser surpreendido por cada mordida. 
+        Desperte seu paladar para o desconhecido e deixe-nos guiar você nessa experiência única.
+        
+        Equipe  CacauMysterium</p>
+    </div>
+
+    <h2 style="text-align:center; font-family: 'SaintCarell'; font-size: 30px;">Our Team</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2 style="font-family: 'SaintCarell';">Ana Clara</h2>
+                    <p class="title">Especialista em embalagens</p>
+                    <p>Ana Clara é uma designer gráfico que trabalha com embalagens de produtos há mais de dez anos. 
+                        Ela é a responsável pelo design das embalagens dos bombons, que além de serem visualmente atrativas, 
+                        protegem os chocolates e garantem a qualidade do produto.</p>
+                    <p class="button">ana@CacauMysterium.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2 style="font-family: 'SaintCarell';">Emily</h2>
+                    <p class="title">Mestre dos sabores</p>
+                    <p>Emily é uma chocolatier experiente, que estudou na França e na Bélgica para aprimorar suas habilidades 
+                       na criação de bombons artesanais. Ela é responsável por desenvolver novas receitas e combinações de sabores 
+                       que fazem os bombons do site serem verdadeiras obras de arte comestíveis.</p>
+                    <p class="button">mike@example.com</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2 style="font-family: 'SaintCarell';">Geovana</h2>
+                    <p class="title">Web designer</p>
+                    <p>Geovana é uma web designer talentosa, que cria sites bonitos e funcionais. 
+                       Ela é o responsável por construir e manter o site de bombons, 
+                       garantindo que ele seja fácil de usar e ofereça uma experiência de compra agradável aos clientes.</p>
+                    <p class="button">mike@example.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2 style="font-family: 'SaintCarell';">Kalliny</h2>
+                    <p class="title">Produtora de conteúdo</p>
+                    <p>Kalliny é uma escritora experiente, que já trabalhou em diversas agências de publicidade. 
+                       Ela é responsável por produzir o conteúdo do site de bombons, 
+                       criando textos que descrevam os sabores e a história de cada bombom.</p>
+                    <p class="button">mike@example.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2 style="font-family: 'SaintCarell';">Katielle</h2>
+                    <p class="title">Expert em marketing digital</p>
+                    <p>Katielle é uma especialista em marketing digital, 
+                        com conhecimentos em SEO, redes sociais e marketing de conteúdo. 
+                        Ela é responsável por promover o site de bombons nas mídias digitais e garantir que ele alcance o público certo.</p>
+                    <p class="button">mike@example.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+                <div class="container">
+                    <h2 style="font-family: 'SaintCarell';">John Doe</h2>
+                    <p class="title">Designer</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p class="button">john@example.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

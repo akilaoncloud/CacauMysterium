@@ -1,18 +1,16 @@
-<?php session_start() ?>
-
 <?php
-    if(isset($_SESSION['login'])) {
+    session_start();
 
-        include('telaAltCad.php');
+    if(isset($_SESSION['login'])) {
 
         if(isset($_GET['logout'])) {
             unset($_SESSION['login']);
             session_destroy();
             header('Location: index.html');
         }
-
+        
     } else { 
-        include('../../Login/TelaLogin.php');
+        header('Location: login.php');
     }
 
 ?>
