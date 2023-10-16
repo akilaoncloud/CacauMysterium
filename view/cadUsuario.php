@@ -1,7 +1,7 @@
 <?php
-include "conexao.php";
-include "../class/usuarios.php";
-include "../dao/usuariosDAO.php";
+include_once "../class/conexao.php";
+include_once "../class/usuarios.php";
+include_once "../dao/usuariosDAO.php";
 
 $msg = "";
 if (!empty($_POST)){

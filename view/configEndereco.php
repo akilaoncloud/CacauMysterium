@@ -1,7 +1,7 @@
 <?php
-include "conexao.php";
-include "../class/endereco.php";
-include "../dao/enderecoDAO.php";
+include_once "../class/conexao.php";
+include_once "../class/endereco.php";
+include_once "../dao/enderecoDAO.php";
 
 $msg = "";
 if (!empty($_POST)){

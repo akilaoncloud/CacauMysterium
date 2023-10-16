@@ -3,14 +3,14 @@
 
     if(isset($_SESSION['login'])) {
 
-        if(isset($_GET['logout'])) {
+        if(isset($_GET['logout']) and $_GET['logout'] == "true") {
             unset($_SESSION['login']);
             session_destroy();
-            header('Location: index.html');
+            header('Location: ../view/fazerLogin.php');
         }
         
     } else { 
-        header('Location: login.php');
+        header('Location: ../view/fazerLogin.php');
     }
 
 ?>

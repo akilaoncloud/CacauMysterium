@@ -1,8 +1,8 @@
 <?php
-include "verificaLogon.php";
-include "conexao.php";
-include "../class/Usuarios.php";
-include "../dao/UsuariosDAO.php";
+include_once "../build/verificaLogon.php";
+include_once "../class/conexao.php";
+include_once "../class/usuarios.php";
+include_once "../dao/usuariosDAO.php";
 
 $msg = "";
 if (!empty($_POST)){

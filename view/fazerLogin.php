@@ -1,7 +1,10 @@
 <?php
-include "conexao.php";
-include "../class/usuarios.php";
-include "../dao/usuariosDAO.php";
+session_start();
+if(isset($_SESSION['login'])) { header('Location: index.php'); }
+
+include_once "../class/conexao.php";
+include_once "../class/usuarios.php";
+include_once "../dao/usuariosDAO.php";
 
 if (!empty($_POST)){
     $objeto = new Usuarios;
@@ -90,7 +93,7 @@ if (!empty($_POST)){
 
         <input type="submit" value="Entrar" id="button" ><br><br>
 
-        <a href = "">Esqueceu seu Usuário ou Senha?</a>
+        <a href="esqueceuSenha.php">Esqueceu sua senha?</a>
     </form>
     
 </body>

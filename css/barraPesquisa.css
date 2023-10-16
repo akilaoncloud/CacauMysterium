@@ -1,0 +1,32 @@
+#divBusca{
+    background-color:#fff;
+    border:solid 1px;
+    border-radius:20px 20px 20px 20px;
+    width:285px;
+    outline: 0;
+    position: fixed;
+}
+
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:6px;
+    font-style:italic;
+    font-size:16px;
+    border:none;
+    height:28px;
+    width:240px;
+    outline: 0;
+}
+
+#lupa{
+    position: relative;
+    border-radius:20px 20px 20px 20px;
+    padding-top: 2px;
+}
+
+#pesquisa{
+    float:relative;
+    padding-left:290px;
+    padding-top: 5px;
+}

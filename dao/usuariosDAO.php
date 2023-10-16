@@ -36,14 +36,16 @@ class UsuariosDAO {
 
     public function validarLogin() {
         $objeto = new Conexao();
-        $SQL = "SELECT nomeUser FROM usuarios WHERE nomeUser = '$this->nomeUser' AND senha = '$this->senha'";
+        $SQL = "SELECT nomeUser FROM usuarios WHERE 
+                BINARY nomeUser = '$this->nomeUser' AND 
+                BINARY senha = '$this->senha'";
         $objeto->set("sql", $SQL);
         $result = $objeto->query($SQL);
 
         if ($result->num_rows > 0) {         
             session_start();
             $_SESSION['login'] = $this->nomeUser; // Login Completo!
-            header('Location: ../view/altCadUsuario.php');
+            header('Location: ../view/index.php');
         } else {
             echo "Nome e/ou senha incorretos!";
         }
@@ -61,7 +63,7 @@ class UsuariosDAO {
             $objeto->set("sql", $SQL);
             $objeto->query($SQL);
             
-            header('location: ../view/login.php');
+            header('location: ../view/fazerLogin.php');
 
         } else {
             echo "Email incorreto ou não existente";
