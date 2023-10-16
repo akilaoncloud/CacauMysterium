@@ -11,7 +11,7 @@ if (!empty($_POST)){
     $objeto->set("email", $_POST["email"]);
     $objeto->set("senha", $_POST["senha"]);
     $objeto->set("CPF", $_POST["CPF"]);
-    $msg = $objeto->Cadastrar();
+    $msg = $objeto->cadastrar();
 }
 ?>
 
@@ -21,7 +21,7 @@ if (!empty($_POST)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Cadastro de Usuário</title>
     <style>
         @font-face {
             font-family: 'SaintCarell';
@@ -63,12 +63,13 @@ if (!empty($_POST)){
             color:rgb(102, 56, 56);
         }
         input[type="number"]::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
+            -webkit-appearance: none;
+            margin: 0;
         }        
     </style>
 </head>
 <body>
+    <?php echo $msg;?>
     <form action="" method="post" id="formulario">
         <h1>Cadastro de Usuário</h1>
         <label for="nomeC">Nome completo:</label><br>
@@ -88,6 +89,5 @@ if (!empty($_POST)){
 
         <input type="submit" value="Cadastrar" id="button" >
     </form>
-      
 </body>
 </html>

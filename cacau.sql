@@ -23,8 +23,7 @@ CREATE TABLE endereco (
     numero int,
     bairro varchar (30) NOT NULL,
     cidade varchar (50) NOT NULL,
-    estado varchar (20) NOT NULL,
-    pais varchar (20) NOT NULL
+    estado varchar (20) NOT NULL
 );
 
 CREATE TABLE cliente (

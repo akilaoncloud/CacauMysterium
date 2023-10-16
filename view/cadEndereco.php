@@ -1,16 +1,17 @@
 <?php
 include "conexao.php";
-include "../class/produtos.php";
-include "../dao/produtosDAO.php";
+include "../class/endereco.php";
+include "../dao/enderecoDAO.php";
 
 $msg = "";
 if (!empty($_POST)){
-    $objeto = new Produtos;
-    $objeto->set("nomeProd", $_POST["nomeProd"]);
-    $objeto->set("descricao", $_POST["descricao"]);
-    $objeto->set("codigo", $_POST["codigo"]);
-    $objeto->set("precoUn", $_POST["precoUn"]);
-    $msg = $objeto->Cadastrar();
+    $objeto = new Endereco;
+    $objeto->set("logradouro", $_POST["logradouro"]);
+    $objeto->set("numero", $_POST["numero"]);
+    $objeto->set("bairro", $_POST["bairro"]);
+    $objeto->set("cidade", $_POST["cidade"]);
+    $objeto->set("estado", $_POST["estado"]);
+    $msg = $objeto->cadastrar();
 }
 ?>
 
@@ -20,7 +21,7 @@ if (!empty($_POST)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Produto</title>
+    <title>Cadastro</title>
     <style>
         @font-face {
             font-family: 'SaintCarell';
@@ -70,18 +71,21 @@ if (!empty($_POST)){
 <body>
     <?php echo $msg;?>
     <form action="" method="post" id="formulario">
-        <h1>Cadastro de Produto</h1>
-        <label for="nomeProd">Nome do Produto:</label><br>
-        <input type="text" id="nomeProd" name="nomeProd" required/><br><br>
+        <h1>Cadastro de Endereço</h1>
+        <label for="logradouro">Logradouro:</label><br>
+        <input type="text" id="logradouro" name="logradouro" required/><br><br>
 
-        <label for="descricao">Descrição:</label><br>
-        <input type="text" id="descricao" name="descricao"required/><br><br>
+        <label for="numero">Número:</label><br>
+        <input type="number" id="numero" name="numero"required/><br><br>
         
-        <label for="codigo">Código:</label><br>
-        <input type="text" id="codigo" name="codigo"required/><br><br>
+        <label for="bairro">Bairro:</label><br>
+        <input type="text" id="bairro" name="bairro"required/><br><br>
 
-        <label for="precoUn">Preço Unitário:</label><br>
-        <input type="password" id="precoUn" name="precoUn"required/><br><br>
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" id="cidade" name="cidade"required/><br><br> 
+
+        <label for="estado">Estado:</label><br>
+        <input type="text" id="estado" name="estado"required><br><br>
 
         <input type="submit" value="Cadastrar" id="button" >
     </form>
