@@ -10,6 +10,11 @@ class Produtos {
         $this->$prop = $value;
     }
 
+    public function verTodos() {
+        $objeto = new ProdutosDAO();
+        return $objeto->verTodos();
+    }
+
     public function cadastrar() {
         $objeto = new ProdutosDAO();
         $objeto->set("nomeProd", $this->nomeProd);

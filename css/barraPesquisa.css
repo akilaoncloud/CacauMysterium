@@ -1,17 +1,15 @@
 #divBusca{
     background-color:#fff;
     border:solid 1px;
-    border-radius:20px 20px 20px 20px;
+    border-radius: 20px;
     width:285px;
     outline: 0;
-    position: fixed;
 }
 
 #txtBusca{
     float:left;
     background-color:transparent;
-    padding-left:6px;
-    font-style:italic;
+    padding-left: 6px;
     font-size:16px;
     border:none;
     height:28px;
@@ -27,6 +25,9 @@
 
 #pesquisa{
     float:relative;
-    padding-left:290px;
-    padding-top: 5px;
+    background-color: inherit;
+    height: 30px;
+    width: 25px;
+    border: none;
+    cursor: pointer;
 }

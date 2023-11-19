@@ -43,7 +43,7 @@ if (!empty($_POST)){
             padding: 0, 25%;
             text-align: left;
             position: absolute;
-            top: 27%;
+            top: 26%;
             left: 14%;
 
         }
@@ -52,26 +52,42 @@ if (!empty($_POST)){
             border-color: rgb(102, 56, 56);
             font-family: 'Times New Roman', Times, serif;
             font-size: medium;
-            width: 90%;
+            width: 290px;
             outline: 0;
             border-radius: 15px;
             text-align: center;
         }
-        #Cadastrar{
+        #button{
             width: 40%;
             font-family: 'SaintCarell';
-            color:rgb(102, 56, 56);
+            color:rgb(92, 36, 36);
+            cursor: pointer;
         }
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
+        }
+        a {
+            color: rgb(255, 230, 230);
+        }
+        a:hover{
+            color: rgb(255, 230, 230);
+            text-decoration: none;
+        }
+        a:link{
+            color: rgb(255, 230, 230);
+            text-decoration: none;
+        }
+        a:visited{
+            color: rgb(255, 230, 230);
+            text-decoration: none;
         }        
     </style>
 </head>
 <body>
     <?php echo $msg;?>
     <form action="" method="post" id="formulario">
-        <h1>Cadastro de Usuário</h1>
+        <h1>Novo Cadastro</h1>
         <label for="nomeC">Nome completo:</label><br>
         <input type="text" id="nomeC" name="nomeC" required/><br><br>
 
@@ -87,7 +103,9 @@ if (!empty($_POST)){
         <label for="CPF">CPF:</label><br>
         <input type="text" id="CPF" name="CPF"required><br><br>
 
-        <input type="submit" value="Cadastrar" id="button" >
+        <input type="submit" value="Cadastrar" id="button" ><br><br>
+
+        <a href="fazerLogin.php">Já tem uma conta? fazer login</a><br>
     </form>
 </body>
 </html>

@@ -58,6 +58,7 @@ if (!empty($_POST)){
             width: 40%;
             font-family: 'SaintCarell';
             color:rgb(92, 36, 36);
+            cursor: pointer;
         }
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -89,7 +90,8 @@ if (!empty($_POST)){
         <label for="novasenha">Nova Senha:</label><br>
         <input type="password" id="novasenha" name="novasenha" required/><br><br>
 
-        <input type="submit" value="Confirmar" id="button" ><br><br>
+        <a href="fazerLogin.php"><input type="button" value="Cancelar" id="button"></a>
+        <input type="submit" value="Confirmar" id="button"><br><br>
     </form>
 </body>
 </html>

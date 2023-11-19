@@ -42,7 +42,7 @@ if (!empty($_POST)){
             padding: 0, 25%;
             text-align: left;
             position: absolute;
-            top: 38%;
+            top: 36%;
             left: 14%;
 
         }
@@ -60,6 +60,7 @@ if (!empty($_POST)){
             width: 40%;
             font-family: 'SaintCarell';
             color:rgb(92, 36, 36);
+            cursor: pointer;
         }
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -91,9 +92,10 @@ if (!empty($_POST)){
         <label for="senha">Senha:</label><br>
         <input type="password" id="senha" name="senha" required/><br><br>
 
-        <input type="submit" value="Entrar" id="button" ><br><br>
+        <input type="submit" value="Entrar" id="button"><br><br>
 
-        <a href="esqueceuSenha.php">Esqueceu sua senha?</a>
+        <a href="esqueceuSenha.php">Esqueceu sua senha?</a><br><br>
+        <a href="cadUsuario.php">Não tem uma conta? cadastre-se</a><br>
     </form>
     
 </body>

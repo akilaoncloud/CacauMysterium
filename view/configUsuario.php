@@ -30,28 +30,25 @@ if (!empty($_POST)){
         }
 
         body{
-            text-align: center;
-            background-image: url(https://i.postimg.cc/QMfDsN22/fundoform.png);
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
+            margin: 0px;
+            height: 100vh;
+            background-color: #521800;
             font-family: 'SaintCarell';
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
         }
         form{
-            color: 	rgb(255,248,220);
-            padding: 0, 25%;
-            text-align: left;
-            position: absolute;
-            top: 27%;
-            left: 14%;
-
+            color: rgb(255,248,220);
         }
+
         input{
             background-color: rgb(255,248,220);
             border-color: rgb(102, 56, 56);
             font-family: 'Times New Roman', Times, serif;
             font-size: medium;
-            width: 90%;
             outline: 0;
             border-radius: 15px;
             text-align: center;

@@ -1,30 +1,22 @@
 <?php
-include "../class/conexao.php";
-include "../class/pesquisa.php";
-include "../dao/pesquisaDAO.php";
+include_once "../class/conexao.php";
+include_once "../class/pesquisa.php";
+include_once "../dao/pesquisaDAO.php";
 
-$msg = "";
+$resultados = "";
 
 if(!empty($_POST)){
 	$objeto = new Pesquisa;
 	$objeto->set("termoBusca", $_POST["txtBusca"]);
 	$resultados = $objeto->pesquisar();
-	
-	foreach($resultados as $produto){
-		foreach($produto as $detalhes){
-			$msg .= $detalhes . "</br>";
-		} $msg .= "</br>";
-	}
 }
 
 ?>
-<form action="" method="post">
+<form action="index.php#produtos" method="post">
 	<div id="divBusca" name="divBusca" >
 		<input type="text" id="txtBusca" name="txtBusca" placeholder=" Buscar..." />
-		<img src="https://i.postimg.cc/Wzz4ZttN/image.png" height="25" width="23" name="lupa" id="lupa"/>  
+		<button name="pesquisa" id="pesquisa">
+			<img src="https://i.postimg.cc/Wzz4ZttN/image.png" height="25" width="23" name="lupa" id="lupa"/>  
+		</button>
 	</div>
-	<div name="pesquisa" id="pesquisa">
-		<input value="Pesquisar" type="submit" name="pesquisar">
-	</div>
-</form><br><br>
-<?php echo $msg;?>
+</form>

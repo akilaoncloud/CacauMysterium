@@ -44,3 +44,8 @@ CREATE TABLE venda (
     FOREIGN KEY (idcliente) REFERENCES cliente(idcliente),
     FOREIGN KEY (idproduto) REFERENCES produtos(idproduto)
 );
+
+-- Cadastrar Produtos
+
+-- INSERT INTO produtos (nomeProd, descricao, codigo, precoUn) 
+-- VALUES ('nomeProd', 'descricao', 'codigo', 'precoUn');

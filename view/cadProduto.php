@@ -1,4 +1,5 @@
 <?php
+include_once "../build/verificaLogon.php";
 include_once "../class/conexao.php";
 include_once "../class/produtos.php";
 include_once "../dao/produtosDAO.php";
@@ -75,13 +76,13 @@ if (!empty($_POST)){
         <input type="text" id="nomeProd" name="nomeProd" required/><br><br>
 
         <label for="descricao">Descrição:</label><br>
-        <input type="text" id="descricao" name="descricao"required/><br><br>
+        <input type="text" id="descricao" name="descricao" required/><br><br>
         
         <label for="codigo">Código:</label><br>
-        <input type="text" id="codigo" name="codigo"required/><br><br>
+        <input type="text" id="codigo" name="codigo" required/><br><br>
 
         <label for="precoUn">Preço Unitário:</label><br>
-        <input type="password" id="precoUn" name="precoUn"required/><br><br>
+        <input type="number" id="precoUn" name="precoUn" required/><br><br>
 
         <input type="submit" value="Cadastrar" id="button" >
     </form>
